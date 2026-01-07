@@ -67,7 +67,7 @@ FROM performance_schema.replication_group_members;
 
 ```
 
-## 📚 참고 자료 (References)
+## 참고 자료 (References)
 
 이 글을 작성하기 위해 참조한 공식 문서와 소스 코드 링크입니다.
 
