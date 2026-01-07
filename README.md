@@ -57,3 +57,23 @@ SELECT MEMBER_HOST, MEMBER_PORT, MEMBER_STATE, MEMBER_COMMUNICATION_STACK
 FROM performance_schema.replication_group_members;
 
 ```
+
+## 📚 참고 자료 (References)
+
+이 글을 작성하기 위해 참조한 공식 문서와 소스 코드 링크입니다.
+
+* **MySQL 공식 매뉴얼 - Communication Stack 설명**
+    * [MySQL 8.4 Reference Manual: Communication Stack for Connection Security Management](https://dev.mysql.com/doc/refman/8.4/en/group-replication-communication-stack.html)
+
+
+* **MySQL 시스템 변수 - group_replication_communication_stack**
+    * [MySQL 8.4 Reference Manual: Sysvar group_replication_communication_stack](https://dev.mysql.com/doc/refman/8.4/en/group-replication-options.html#sysvar_group_replication_communication_stack)
+
+
+* **MySQL Shell 릴리즈 노트 (8.0.27)**
+    * [MySQL Shell 8.0.27 Release Notes](https://dev.mysql.com/doc/relnotes/mysql-shell/8.0/en/news-8-0-27.html)
+
+
+* **MySQL Shell 소스 코드 (GitHub)**
+    * [GitHub: mysql-shell/mysqlsh/modules/dba](https://github.com/mysql/mysql-shell/tree/master/mysqlsh/modules/dba)
+
