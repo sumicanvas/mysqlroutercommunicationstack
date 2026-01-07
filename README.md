@@ -18,7 +18,7 @@ MySQL InnoDB Cluster를 구축하다 보면 네트워크 설정에서 혼란을 
 
 ## 2. 8.0.27 버전 이전  vs 8.0.27 + & 8.4 : 무엇이 바뀌었나? (XCOM vs MySQL)
 
-과거에는 이 변수에 `33061`과 같은 별도의 포트를 할당하는 것이 필수였습니다. 하지만 MySQL 8.0.27 이후, 그리고 8.4 LTS 버전에서는 **Communication Stack**의 변화로 인해 패러다임이 바뀌었습니다.
+과거에는 이 변수에 `33061`과 같은 별도의 포트를 할당하는 것이 필수였습니다. 하지만 MySQL 8.0.27 이후, 그리고 8.4 LTS 버전에서는 **Communication Stack**의 변화로 인해 동작방식이 바뀌었습니다.
 
 ### A. 기존 방식: XCOM Stack (Legacy)
 우리가 흔히 알고 있는 전통적인 방식입니다. 현재도 기본값은 이 값으로 설정되어 있습니다. 다만 mysql shell 을 이용해 클러스터를 생성 때 8.0.27 + 버전이면 기본값을 변경해줍니다.
@@ -70,10 +70,6 @@ FROM performance_schema.replication_group_members;
     * [MySQL 8.4 Reference Manual: Sysvar group_replication_communication_stack](https://dev.mysql.com/doc/refman/8.4/en/group-replication-options.html#sysvar_group_replication_communication_stack)
 
 
-* **MySQL Shell 릴리즈 노트 (8.0.27)**
-    * [MySQL Shell 8.0.27 Release Notes](https://dev.mysql.com/doc/relnotes/mysql-shell/8.0/en/news-8-0-27.html)
-
-
 * **MySQL Shell 소스 코드 (GitHub)**
-    * [GitHub: mysql-shell/mysqlsh/modules/dba](https://github.com/mysql/mysql-shell/tree/master/mysqlsh/modules/dba)
+    * [GitHub:mysql-shell](https://github.com/mysql/mysql-shell/tree/master/modules/adminapi/dba))
 
