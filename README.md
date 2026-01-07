@@ -7,7 +7,7 @@ MySQL InnoDB Cluster를 구축하다 보면 네트워크 설정에서 혼란을 
 
 ## 1. group_replication_local_address 란?
 
-`group_replication_local_address`는 Group Replication 멤버들이 서로 통신하기 위해 사용하는 **"각 멤버의 고유한 주소(IP:Port)"**를 정의하는 시스템 변수입니다.
+`group_replication_local_address`는 Group Replication 멤버들이 서로 통신하기 위해 사용하는 **각 멤버의 고유한 주소(IP:Port)**를 정의하는 시스템 변수입니다.
 
 클러스터 멤버들은 이 주소를 통해 다음과 같은 작업을 수행합니다.
 * **Heartbeat:** 서로 살아있는지 생존 확인
