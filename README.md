@@ -1,9 +1,7 @@
 ## [MySQL] Group Replication Communication Stack (33061 or 3306 포트)
 : group_replication_local_address와 Communication Stack의 변화 (XCOM vs MySQL)
 
-MySQL InnoDB Cluster를 구축하다 보면 네트워크 설정에서 혼란을 겪을 때가 있습니다. 분명 매뉴얼에는 Group Replication 통신을 위해 `33061` 포트를 열어야 한다고 되어 있는데, 막상 최신 버전(8.0 후반 ~ 8.4)으로 구축해 보면 `33061` 포트는 리슨(Listen)조차 하지 않고, `3306` 포트 하나만으로 클러스터가 잘 동작하는 현상을 목격하게 됩니다.
-
-이번 글에서는 `group_replication_local_address` 변수의 의미와, MySQL 8.0.27 이전 버전에서 8.0.27 + 및 8.4에서의 **Communication Stack(통신 스택)**이 어떻게 변화했는지 정리해 봅니다.
+이번 글에서는 InnoDB Cluster 의 핵심 컴포넌트인 Group Replication 의  `group_replication_local_address` 변수와, MySQL 8.0.27 이전 버전과 8.0.27 + 및 8.4에서의 **Communication Stack(통신 스택)**이 어떻게 변화했는지 정리해 봅니다.
 
 ## 1. group_replication_local_address 란?
 
